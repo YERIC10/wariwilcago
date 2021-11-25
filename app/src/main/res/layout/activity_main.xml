@@ -20,6 +20,18 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        android:background="@color/Brow100"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer" >
+
+        <ImageView
+            android:layout_width="194dp"
+            android:layout_height="83dp"
+            android:layout_gravity="bottom|center"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/logo_uc">
+
+        </ImageView>
+    </com.google.android.material.navigation.NavigationView>
+
 </androidx.drawerlayout.widget.DrawerLayout>

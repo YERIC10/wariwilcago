@@ -1,5 +1,6 @@
 package com.example.wariwilca_go;
 
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -38,10 +39,11 @@ public class MainActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        navigationView.setItemTextColor(ColorStateList.valueOf(getResources().getColor(R.color.black)));
+        navigationView.setItemIconTintList(null);
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_registrar, R.id.nav_recorrido, R.id.nav_busquedaqr, R.id.nav_reserva)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

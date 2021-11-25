@@ -25,6 +25,6 @@ public class Splash_Inicio extends AppCompatActivity {
             }
         };
         tiempo = new Timer();
-        tiempo.schedule(carga, 5000);
+        tiempo.schedule(carga, 1000);
     }
 }
