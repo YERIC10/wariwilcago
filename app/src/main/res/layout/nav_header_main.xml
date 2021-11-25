@@ -35,6 +35,6 @@
         android:text="usuario"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:textColor="@color/Brow50"
-        android:textSize="15p" />
+        android:textSize="15dp" />
 
 </LinearLayout>
