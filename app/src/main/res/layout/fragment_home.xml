@@ -35,7 +35,7 @@ arqueológico del Perú, de la era prehispánica,
 cuya construcción principal es un santuario o
 adoratorio"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_home_acceso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@ adoratorio"
     </TextView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_home_acceso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="176dp"
