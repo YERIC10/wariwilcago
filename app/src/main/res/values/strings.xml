@@ -8,8 +8,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Inicio</string>
-    <string name="menu_busqueda">Recorrido del Museo</string>
-    <string name="menu_recorrido">Busqueda QR</string>
+    <string name="menu_busqueda">Busqueda QR</string>
+    <string name="menu_recorrido">Recorrido del Museo</string>
     <string name="menu_registrar">Registro de Defensores</string>
     <string name="menu_reserva">Reserva Visita</string>
 </resources>
