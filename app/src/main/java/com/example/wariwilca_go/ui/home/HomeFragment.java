@@ -70,8 +70,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 initializeYouTubePlayer.addListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady() {
-                        String videoURL = "igt22WpLuF0";
-                        initializeYouTubePlayer.loadVideo(videoURL, 0);
+                        //String videoURL = "igt22WpLuF0";
+                        //initializeYouTubePlayer.loadVideo(videoURL, 0);
                     }
                 });
             }

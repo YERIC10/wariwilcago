@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/img_entrada_fondo"
+        android:layout_width="653dp"
+        android:layout_height="346dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492">
+
+    </ImageView>
+
+    <ImageButton
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_recto"
+        android:id="@+id/btnAdelante_entrada"
+        app:layout_constraintBottom_toBottomOf="@+id/img_entrada_fondo"
+        app:layout_constraintEnd_toEndOf="@+id/img_entrada_fondo"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/img_entrada_fondo"
+        app:layout_constraintTop_toTopOf="@+id/img_entrada_fondo"
+        app:layout_constraintVertical_bias="0.699">
+
+    </ImageButton>
+
+    <ImageButton
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_derecha"
+        android:id="@+id/btnDerecha_entrada"
+        app:layout_constraintBottom_toBottomOf="@+id/img_entrada_fondo"
+        app:layout_constraintEnd_toEndOf="@+id/img_entrada_fondo"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toStartOf="@+id/img_entrada_fondo"
+        app:layout_constraintTop_toTopOf="@+id/img_entrada_fondo"
+        app:layout_constraintVertical_bias="1.0">
+
+    </ImageButton>
+
+    <ImageButton
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="86dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_izquierda"
+        android:id="@+id/btnIzquierda_entrada"
+        app:layout_constraintBottom_toBottomOf="@+id/img_entrada_fondo"
+        app:layout_constraintEnd_toEndOf="@+id/img_entrada_fondo"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toStartOf="@+id/img_entrada_fondo"
+        app:layout_constraintTop_toTopOf="@+id/img_entrada_fondo"
+        app:layout_constraintVertical_bias="1.0">
+
+    </ImageButton>
+
+    <ImageButton
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_atras"
+        android:id="@+id/btnAtras_entrada"
+        app:layout_constraintBottom_toBottomOf="@+id/img_entrada_fondo"
+        app:layout_constraintEnd_toEndOf="@+id/img_entrada_fondo"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="@+id/img_entrada_fondo"
+        app:layout_constraintTop_toTopOf="@+id/img_entrada_fondo"
+        app:layout_constraintVertical_bias="1.0">
+
+    </ImageButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,8 +2,10 @@ package com.example.wariwilca_go;
 
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -63,5 +65,24 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.item_usuario:
+                itemusuario();
+                return true;
+            
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void itemusuario() {
+        //LLAMAR A LA VENTA DE USUARIO Y DE REGISTRO DE PUNTOS
+        Toast.makeText(this, "USUARIO", Toast.LENGTH_SHORT).show();
     }
 }

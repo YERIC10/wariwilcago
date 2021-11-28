@@ -25,5 +25,7 @@
             android:id="@+id/nav_reserva"
             android:icon="@drawable/ic_menu_reserva"
             android:title="@string/menu_reserva" />
+
     </group>
+
 </menu>
