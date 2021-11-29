@@ -12,14 +12,18 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/busqueda_QR"
         android:name="com.example.wariwilca_go.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/reg_defensores"
+        android:name="com.example.wariwilca_go.ui.defensores.DefensoresFragment"
+        android:label="@string/reg_defensores"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.wariwilca_go.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>
