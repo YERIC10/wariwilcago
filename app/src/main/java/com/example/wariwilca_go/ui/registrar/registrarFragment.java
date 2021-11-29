@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import com.example.wariwilca_go.R;
-import com.example.wariwilca_go.ui.recorrido.recorridoFragment;
 
 public class registrarFragment extends Fragment {
 

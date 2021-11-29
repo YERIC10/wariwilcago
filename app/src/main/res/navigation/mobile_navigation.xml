@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/nav_recorrido"
-        android:name="com.example.wariwilca_go.ui.recorrido.recorridoFragment"
+        android:name="com.example.wariwilca_go.ui.recorrido.Recorrido_Fragment"
         android:label="@string/menu_recorrido"
-        tools:layout="@layout/fragment_recorrido" >
+        tools:layout="@layout/fragment_recorrido_" >
     </fragment>
 
     <fragment

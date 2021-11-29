@@ -25,6 +25,7 @@ public class busquedaFragment extends Fragment {
 
         View vista =  inflater.inflate(R.layout.fragment_busqueda, container, false);
 
+
         return vista;
     }
 }
