@@ -12,11 +12,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/busqueda_QR"
-        android:name="com.example.wariwilca_go.ui.qr.BusquedaFragment"
-        tools:layout="@layout/fragment_busqueda" />
+        android:id="@+id/nav_recorrido"
+        android:name="com.example.wariwilca_go.ui.recorrido.Recorrido_Fragment"
+        android:label="@string/menu_recorrido"
+        tools:layout="@layout/fragment_recorrido_"/>
 
-    <fragment
+  <fragment
         android:id="@+id/reg_defensores"
         android:name="com.example.wariwilca_go.ui.defensores.DefensoresFragment"
         android:label="@string/reg_defensores"
@@ -27,6 +28,11 @@
         android:name="com.example.wariwilca_go.ui.visita.VisitaFragment"
         android:label="@string/res_visita"
         tools:layout="@layout/fragment_visita" />
+
+  <fragment
+        android:id="@+id/busqueda_QR"
+        android:name="com.example.wariwilca_go.ui.qr.BusquedaFragment"
+        tools:layout="@layout/fragment_busqueda" />    
 
     <fragment
         android:id="@+id/nav_slideshow"

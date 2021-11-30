@@ -1,5 +1,11 @@
 package com.example.wariwilca_go;
 
+
+import android.content.res.ColorStateList;
+import android.os.Bundle;
+
+import android.widget.Toast;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.opengl.Visibility;
@@ -10,6 +16,7 @@ import android.view.View;
 import android.view.Menu;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.AdRequest;
@@ -88,10 +95,11 @@ public class MainActivity extends AppCompatActivity {
         //NOSE
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        navigationView.setItemTextColor(ColorStateList.valueOf(getResources().getColor(R.color.black)));
+        navigationView.setItemIconTintList(null);
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.reg_defensores, R.id.res_visita, R.id.busqueda_QR, R.id.nav_slideshow)
+                R.id.nav_home, R.id.reg_defensores,R.id.nav_recorrido, R.id.res_visita, R.id.busqueda_QR, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

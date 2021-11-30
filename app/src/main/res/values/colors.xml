@@ -7,6 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Brow50">#EFEBE9</color>
+    <color name="Brow100">#D7CCCB</color>
+    <color name="Brow200">#BCAAA4</color>
+    <color name="Brow300">#A1887F</color>
+    <color name="Brow400">#8D6E63</color>
+    <color name="Brow500">#795548</color>
+    <color name="Brow600">#6D4C41</color>
+    <color name="Brow700">#5D4037</color>
+    <color name="Brow800">#4E3427</color>
+    <color name="Brow900">#3E2723</color>
     <color name="primaryColor">#8D6E63</color>
     <color name="secondColor">#795548</color>
     <color name="darkColor">#4E342E</color>
