@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        binding.appBarMain.fab.setVisibility(View.GONE);
         setSupportActionBar(binding.appBarMain.toolbar);
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setItemIconTintList(null);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.reg_defensores,R.id.nav_recorrido, R.id.res_visita, R.id.busqueda_QR, R.id.nav_slideshow)
+                R.id.nav_home, R.id.reg_defensores,R.id.nav_recorrido, R.id.res_visita, R.id.busqueda_QR)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);

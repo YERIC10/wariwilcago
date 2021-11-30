@@ -32,10 +32,6 @@
   <fragment
         android:id="@+id/busqueda_QR"
         android:name="com.example.wariwilca_go.ui.qr.BusquedaFragment"
-        tools:layout="@layout/fragment_busqueda" />    
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.wariwilca_go.ui.slideshow.SlideshowFragment"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="@string/busqueda_QR"
+        tools:layout="@layout/fragment_busqueda" />
 </navigation>
