@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.visita.VisitaFragment"
+    android:background="@color/lightColor"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:layout_width="327dp"
+        android:layout_height="197dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/wari">
+
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="REGISTRO DE VISITA"
+        android:textSize="35dp"
+        android:textColor="@color/darkColor"
+        android:fontFamily="sans-serif-black"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="FECHA"
+        android:textSize="20dp"
+        android:textColor="@color/darkColor"
+        android:fontFamily="sans-serif-black"></TextView>
+    <Button
+        android:id="@+id/btnFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Fecha">
+    </Button>
+    <EditText
+        android:id="@+id/visitFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="HORA"
+        android:textSize="20dp"
+        android:textColor="@color/darkColor"
+        android:fontFamily="sans-serif-black"></TextView>
+    <Button
+        android:id="@+id/btnHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar Hora">
+    </Button>
+    <EditText
+        android:id="@+id/visitHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+    </EditText>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="CANTIDAD DE PERSONAS"
+        android:textSize="20dp"
+        android:textColor="@color/darkColor"
+        android:fontFamily="sans-serif-black"></TextView>
+    <EditText
+        android:id="@+id/defResidencia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:hint="Ingrese su lugar de residencia">
+    </EditText>
+
+</LinearLayout>

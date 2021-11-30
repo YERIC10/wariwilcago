@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -38,6 +40,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
@@ -45,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "GoogleActivity";
     private static final int RC_SIGN_IN = 9001;
+
+
+    private AdView mAdView;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -68,18 +77,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         //NOSE
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.reg_defensores, R.id.nav_slideshow)
+                R.id.nav_home, R.id.reg_defensores, R.id.res_visita, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
 
     }
 
@@ -88,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 .requestIdToken("376476661021-sjvqc5gm62i0dku2r7o8e2485onhuq4m.apps.googleusercontent.com")
                 .requestEmail()
                 .build();
-
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         mAuth = FirebaseAuth.getInstance();
     }
@@ -181,27 +200,32 @@ public class MainActivity extends AppCompatActivity {
     }
     // [END auth_with_google]
 
+    public static class Global {
+        public static String playerName;
+        public static Uri playerImg;
+        public static String playerEmail;
+    }
+
     private void gamesGetUserInfo(FirebaseUser user) {
 
         //NOMBRE
-        String playerName = user.getDisplayName();
+        Global.playerName = user.getDisplayName();
         TextView name = findViewById(R.id.userName);
         name.setVisibility(View.VISIBLE);
-        name.setText(playerName);
+        name.setText(Global.playerName );
 
         //IMAGEN
-        Uri imagen = user.getPhotoUrl();
+        Global.playerImg = user.getPhotoUrl();
         ImageView imageView = findViewById(R.id.userFoto);
-        Glide.with(this).load(imagen).into(imageView);
+        Glide.with(this).load(Global.playerImg ).into(imageView);
         imageView.setVisibility(View.VISIBLE);
 
         //EMAIL
-        String playerEmail = user.getEmail();
+        Global.playerEmail = user.getEmail();
         TextView email = findViewById(R.id.userEmail);
-        email.setText(playerEmail);
+        email.setText(Global.playerEmail);
         email.setVisibility(View.VISIBLE);
     }
-
 
     // [START signin]
     private void signIn() {
