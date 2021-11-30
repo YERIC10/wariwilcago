@@ -10,81 +10,88 @@
     android:background="@color/Brow100"
     android:padding="@dimen/activity_vertical_margin">
 
-    <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:layout_width="327dp"
-        android:layout_height="197dp"
-        android:layout_gravity="center"
-        android:src="@mipmap/wari">
-
-    </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="REGISTRO DE DEFENSORES"
-        android:textSize="35dp"
-        android:textColor="@color/darkColor"
-        android:fontFamily="sans-serif-black"></TextView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="DNI"
-        android:textSize="20dp"
-        android:textColor="@color/darkColor"
-        android:fontFamily="sans-serif-black"></TextView>
-    <EditText
-        android:id="@+id/defDNI"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:inputType="number"
-        android:digits="0123456789"
-        android:hint="Ingrese su DNI">
-    </EditText>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="EDAD"
-        android:textSize="20dp"
-        android:textColor="@color/darkColor"
-        android:fontFamily="sans-serif-black"></TextView>
-    <EditText
-        android:id="@+id/defEdad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:inputType="number"
-        android:digits="0123456789"
-        android:hint="Ingrese su edad">
-    </EditText>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="RESIDENCIA"
-        android:textSize="20dp"
-        android:textColor="@color/darkColor"
-        android:fontFamily="sans-serif-black"></TextView>
-    <EditText
-        android:id="@+id/defResidencia"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="25dp"
-        android:hint="Ingrese su lugar de residencia">
-    </EditText>
-    <Button
-        android:id="@+id/btnSoliDef"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/darkColor"
-        android:layout_marginTop="20dp"
-        android:text="Enviar Solicitud"
-        android:textSize="20dp"
-        ></Button>
-
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- TODO: Update blank fragment layout -->
+            <ImageView
+                android:layout_width="327dp"
+                android:layout_height="197dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/wari">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="REGISTRO DE DEFENSORES"
+                android:textSize="35dp"
+                android:textColor="@color/darkColor"
+                android:fontFamily="sans-serif-black"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="DNI"
+                android:textSize="20dp"
+                android:textColor="@color/darkColor"
+                android:fontFamily="sans-serif-black"></TextView>
+            <EditText
+                android:id="@+id/defDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:hint="Ingrese su DNI">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="EDAD"
+                android:textSize="20dp"
+                android:textColor="@color/darkColor"
+                android:fontFamily="sans-serif-black"></TextView>
+            <EditText
+                android:id="@+id/defEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:hint="Ingrese su edad">
+            </EditText>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="RESIDENCIA"
+                android:textSize="20dp"
+                android:textColor="@color/darkColor"
+                android:fontFamily="sans-serif-black"></TextView>
+            <EditText
+                android:id="@+id/defResidencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:hint="Ingrese su lugar de residencia">
+            </EditText>
+            <Button
+                android:id="@+id/btnSoliDef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/darkColor"
+                android:layout_marginTop="20dp"
+                android:text="Enviar Solicitud"
+                android:textSize="20dp"
+                ></Button>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
