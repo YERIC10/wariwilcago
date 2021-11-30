@@ -13,8 +13,8 @@
 
     <fragment
         android:id="@+id/busqueda_QR"
-        android:name="com.example.wariwilca_go.ui.gallery.GalleryFragment"
-        tools:layout="@layout/fragment_gallery" />
+        android:name="com.example.wariwilca_go.ui.qr.BusquedaFragment"
+        tools:layout="@layout/fragment_busqueda" />
 
     <fragment
         android:id="@+id/reg_defensores"
