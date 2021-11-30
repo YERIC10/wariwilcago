@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Brow100"
     tools:context=".ui.recorrido.Recorrido_Centro">
 
     <ImageView
@@ -14,12 +15,28 @@
         android:src="@drawable/img_centro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.061">
 
     </ImageView>
+
+    <TextView
+        android:layout_width="156dp"
+        android:layout_height="288dp"
+        android:gravity="center"
+        android:text="La planta del llamado santuario o adoratorio es de forma irregular tendiente al cuadrilátero."
+        android:textColor="@color/Brow900"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgcentro"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13">
+
+    </TextView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,20 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Brow100"
     tools:context=".ui.recorrido.Recorrido_SupIzq">
 
     <ImageView
         android:id="@+id/imgsupizq"
-        android:layout_width="524dp"
-        android:layout_height="301dp"
+        android:layout_width="503dp"
+        android:layout_height="283dp"
         android:src="@drawable/img_supizq"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.145">
 
     </ImageView>
+
+    <TextView
+        android:layout_width="174dp"
+        android:layout_height="283dp"
+        android:gravity="center"
+        android:text="Wariwillka tiene en su interior dos árboles de molle antiguos de por lo menos 500 años de edad."
+        android:textColor="@color/Brow900"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toEndOf="@+id/imgsupizq"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13">
+
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
