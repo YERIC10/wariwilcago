@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "376476661021",
+    "project_id": "wariwilca-go",
+    "storage_bucket": "wariwilca-go.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:376476661021:android:85ce8ba375e01eafea1df4",
+        "android_client_info": {
+          "package_name": "com.example.wariwilca_go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "376476661021-sjvqc5gm62i0dku2r7o8e2485onhuq4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzhurqkC-mh39lpv35EV-r-NUnPy4TyRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "376476661021-sjvqc5gm62i0dku2r7o8e2485onhuq4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
