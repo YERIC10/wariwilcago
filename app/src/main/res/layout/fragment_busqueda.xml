@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/lightColor"
+    android:background="@color/Brow100"
     tools:context=".ui.qr.BusquedaFragment">
     <TextView
         android:layout_width="wrap_content"

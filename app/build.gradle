@@ -53,8 +53,9 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.5'
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //YOUTUBE
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
-
+    //FIREBASE-GMAIL
     implementation 'com.google.firebase:firebase-auth:21.0.1'
     implementation 'com.google.android.gms:play-services-auth:19.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'

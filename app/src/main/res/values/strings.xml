@@ -6,18 +6,13 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
-    //RECORRIDO
-    <string name="menu_home">INICIO</string>
-    <string name="menu_busqueda">BUSQUEDA QR</string>
-    <string name="menu_recorrido">RECORRIDO</string>
-    <string name="menu_registrar">REGISTRO DEFENSOPRES</string>
-    <string name="menu_reserva">RESERVA</string>
     //ITEMS
-    <string name="menu_home">Home</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_recorrido">Recorrido</string>
     <string name="res_visita">Reserva de Visita</string>
     <string name="reg_defensores">Registro de Defensores</string>
     <string name="busqueda_QR">Busqueda QR</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="infoWari">Wuarihuilca o Wari-Willka es un yacimiento arqueológico del Perú, de la era prehispánica, cuya construcción principal es un santuario o adoratorio</string>
 </resources>

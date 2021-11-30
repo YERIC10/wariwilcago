@@ -21,9 +21,7 @@ import android.widget.Toast;
 import com.example.wariwilca_go.MainActivity;
 import com.example.wariwilca_go.R;
 import com.example.wariwilca_go.databinding.ActivityMainBinding;
-import com.example.wariwilca_go.databinding.FragmentGalleryBinding;
 import com.example.wariwilca_go.model.Solicitud;
-import com.example.wariwilca_go.ui.gallery.GalleryViewModel;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -45,8 +43,6 @@ public class DefensoresFragment extends Fragment implements View.OnClickListener
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-
-    private FragmentGalleryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -70,12 +66,6 @@ public class DefensoresFragment extends Fragment implements View.OnClickListener
         edtUbi =  getView().findViewById(R.id.defResidencia);
         btnSolicitudDefensores =  getView().findViewById(R.id.btnSoliDef);
         btnSolicitudDefensores.setOnClickListener(this::onClick);
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
     }
 
     @Override

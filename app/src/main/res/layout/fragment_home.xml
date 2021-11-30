@@ -8,16 +8,30 @@
     tools:context=".ui.home.HomeFragment"
     android:background="@color/Brow50">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="WARIVILLCA GO"
+        android:textColor="@color/darkColor"
+        android:textSize="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView
         android:id="@+id/video_fraghome"
         android:layout_width="377dp"
         android:layout_height="251dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="53dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:ignore="MissingClass">
 
     </com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView>
@@ -25,22 +39,20 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="332dp"
-        android:layout_height="88dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="24dp"
         android:gravity="center"
-        android:text="Huarihuilca o Wari-Willka es un yacimiento
-arqueológico del Perú, de la era prehispánica,
-cuya construcción principal es un santuario o
-adoratorio"
+        android:text="@string/infoWari"
         android:textColor="@color/black"
+        android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_home_acceso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/video_fraghome"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.552">
 
     </TextView>
 
@@ -48,7 +60,7 @@ adoratorio"
         android:id="@+id/btn_home_acceso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
+        android:layout_marginBottom="108dp"
         android:backgroundTint="@color/Brow200"
         android:text="dale un vistazo"
         android:textColor="@color/black"

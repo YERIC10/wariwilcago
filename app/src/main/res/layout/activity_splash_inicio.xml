@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".Splash_Inicio"
     android:background="@color/white"
-    android:padding="20dp"
-    >
+    android:padding="20dp">
 
     <ImageView
         android:id="@+id/imageView2"

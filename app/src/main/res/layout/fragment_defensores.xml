@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.defensores.DefensoresFragment"
-    android:background="@color/lightColor"
+    android:background="@color/Brow100"
     android:padding="@dimen/activity_vertical_margin">
 
     <!-- TODO: Update blank fragment layout -->
