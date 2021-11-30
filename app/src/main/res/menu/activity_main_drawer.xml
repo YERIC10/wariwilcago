@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view"
-    >
-
+    tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
@@ -13,19 +11,17 @@
             android:id="@+id/nav_recorrido"
             android:icon="@drawable/ic_menu_recorrido"
             android:title="@string/menu_recorrido" />
+       <item
+            android:id="@+id/busqueda_QR"
+            android:icon="@drawable/ic_search"
+            android:title="@string/busqueda_QR" />
         <item
-            android:id="@+id/nav_busquedaqr"
-            android:icon="@drawable/ic_menu_busqueda"
-            android:title="@string/menu_busqueda" />
+            android:id="@+id/reg_defensores"
+            android:icon="@drawable/ic_defensores"
+            android:title="@string/reg_defensores" />
         <item
-            android:id="@+id/nav_registrar"
-            android:icon="@drawable/ic_menu_registrar"
-            android:title="@string/menu_registrar" />
-        <item
-            android:id="@+id/nav_reserva"
-            android:icon="@drawable/ic_menu_reserva"
-            android:title="@string/menu_reserva" />
-
+            android:id="@+id/res_visita"
+            android:icon="@drawable/ic_book"
+            android:title="@string/res_visita" />
     </group>
-
 </menu>

@@ -12,30 +12,30 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_reserva"
-        android:name="com.example.wariwilca_go.ui.reserva.reservaFragment"
-        android:label="@string/menu_reserva"
-        tools:layout="@layout/fragment_reserva" />
-
-    <fragment
         android:id="@+id/nav_recorrido"
         android:name="com.example.wariwilca_go.ui.recorrido.Recorrido_Fragment"
         android:label="@string/menu_recorrido"
-        tools:layout="@layout/fragment_recorrido_" >
-    </fragment>
+        tools:layout="@layout/fragment_recorrido_"/>
+
+  <fragment
+        android:id="@+id/reg_defensores"
+        android:name="com.example.wariwilca_go.ui.defensores.DefensoresFragment"
+        android:label="@string/reg_defensores"
+        tools:layout="@layout/fragment_defensores" />
 
     <fragment
-        android:id="@+id/nav_busquedaqr"
-        android:name="com.example.wariwilca_go.ui.buscar.busquedaFragment"
-        android:label="@string/menu_busqueda"
-        tools:layout="@layout/fragment_busqueda" />
+        android:id="@+id/res_visita"
+        android:name="com.example.wariwilca_go.ui.visita.VisitaFragment"
+        android:label="@string/res_visita"
+        tools:layout="@layout/fragment_visita" />
+
+  <fragment
+        android:id="@+id/busqueda_QR"
+        android:name="com.example.wariwilca_go.ui.qr.BusquedaFragment"
+        tools:layout="@layout/fragment_busqueda" />    
 
     <fragment
-        android:id="@+id/nav_registrar"
-        android:name="com.example.wariwilca_go.ui.registrar.registrarFragment"
-        android:label="@string/menu_registrar"
-        tools:layout="@layout/fragment_registrar" />
-
-
-
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.wariwilca_go.ui.slideshow.SlideshowFragment"
+        tools:layout="@layout/fragment_slideshow" />
 </navigation>
