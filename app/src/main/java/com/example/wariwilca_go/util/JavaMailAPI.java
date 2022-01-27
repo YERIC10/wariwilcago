@@ -15,6 +15,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
 
     //Declaring Variables
@@ -39,8 +41,6 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        Toast.makeText(context, "Enviando la solicitud.", Toast.LENGTH_LONG).show();
-
     }
 
     @Override
@@ -50,6 +50,7 @@ public class JavaMailAPI extends AsyncTask<Void,Void,Void>  {
         //progressDialog.dismiss();
         //Showing a success message
         Toast.makeText(context, "El mensaje se envió correctamente.", Toast.LENGTH_LONG).show();
+        new SweetAlertDialog(context, SweetAlertDialog.SUCCESS_TYPE).setTitleText("¡BUEN TRABAJO!").setContentText("Su solicitud se envió correctamente.").show();
     }
 
     @Override

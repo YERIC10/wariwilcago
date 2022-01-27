@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/Brow100"
-    tools:context=".ui.qr.BusquedaFragment">
+    android:background="@drawable/gradient_background"
+    tools:context=".ui.qr.BusquedaFragment"
+    android:padding="@dimen/activity_vertical_margin">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -20,25 +22,36 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:text="BÚSQUEDA DE QR"
+                android:fontFamily="@font/abel"
+                android:textStyle="bold"
                 android:textSize="35dp"
-                android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:textColor="@color/darkColor"></TextView>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:background="@drawable/separador"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
             <TextView
                 android:id="@+id/infoBusqueda"
-                android:textSize="25dp"
-                android:textAlignment="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:text="En los folletos, boletines y recorridos; podrás encontrar códigos QR, que te ayudarán a obtener mayor información." />
+                android:text="En los folletos, boletines y recorridos; podrás encontrar códigos QR, que te ayudarán a obtener mayor información."
+                android:textAlignment="center"
+                android:fontFamily="@font/quicksand"
+                android:textSize="25dp" />
             <Button
                 android:id="@+id/btnQR"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:backgroundTint="@color/Brow300"
+                android:text="Identificar QR"
+                app:cornerRadius="10dp"
                 android:textSize="20dp"
-                android:text="Identificar QR">
+                android:fontFamily="@font/quicksand">
             </Button>
             <TextView
                 android:id="@+id/tituloQR"
@@ -49,13 +62,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:visibility="gone"
-                android:text="PROBANDO" />
+                android:text="ENFOQUE UN CODIGO QR CORRECTO" />
             <ImageView
                 android:layout_marginTop="20dp"
                 android:id="@+id/imgQR"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@mipmap/wari">
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@mipmap/wari"
+                android:background="#000000"
+                android:padding="1dp">
             </ImageView>
             <TextView
                 android:visibility="gone"
@@ -66,6 +83,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand"
                 android:text="PROBANDO" />
             <TextView
                 android:visibility="gone"
@@ -76,6 +94,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand"
                 android:text="PROBANDO" />
         </LinearLayout>
     </ScrollView>

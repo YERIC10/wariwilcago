@@ -76,5 +76,8 @@ dependencies {
     //QR
     implementation 'me.dm7.barcodescanner:zxing:1.9.13'
     implementation 'com.karumi:dexter:6.2.2'
-
+    //SWEETALERT
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+    //TAPTARGET
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.11.0'
 }

@@ -1,15 +1,15 @@
 package com.example.wariwilca_go;
 
 
-import android.content.res.ColorStateList;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 
-import android.widget.Toast;
+import android.os.Handler;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.opengl.Visibility;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 
 import com.bumptech.glide.Glide;
+import com.getkeepsafe.taptargetview.TapTarget;
+import com.getkeepsafe.taptargetview.TapTargetSequence;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -33,6 +35,8 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -50,6 +54,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
         binding.appBarMain.fab.setVisibility(View.GONE);
         setSupportActionBar(binding.appBarMain.toolbar);
+
+
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -93,11 +100,9 @@ public class MainActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        //NOSE
+        //MENU
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        navigationView.setItemTextColor(ColorStateList.valueOf(getResources().getColor(R.color.black)));
-        navigationView.setItemIconTintList(null);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.reg_defensores,R.id.nav_recorrido, R.id.res_visita, R.id.busqueda_QR)
@@ -107,9 +112,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
 
-
-
     }
+
+
+
 
     private void initGoogleSignIn() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -125,6 +131,72 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        //TUTORIAL DE PRIMERA VEZ
+        new Handler().post(new Runnable() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void run() {
+                final View view = findViewById(R.id.action_login);
+                final View view2 = findViewById(R.id.pruebaBTN);
+                final Drawable menu = ContextCompat.getDrawable(MainActivity.this, R.drawable.ic_menu_icon2);
+                Typeface prueba = Typeface.createFromAsset(getAssets(), "fonts/quicksand_medium.ttf");
+
+                NavigationView navigationView = binding.navView;
+                new TapTargetSequence(MainActivity.this)
+                        .targets(
+                                TapTarget.forView(view, "¡BIENVENIDO!", "Es necesario hacer clic aquí para registrarte por GMAIL")
+                                        // All options below are optional
+                                        .outerCircleColor(R.color.Brow100)      // Specify a color for the outer circle
+                                        .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
+                                        .targetCircleColor(R.color.Brow300)   // Specify a color for the target circle
+                                        .titleTextSize(30)                  // Specify the size (in sp) of the title text
+                                        .titleTextColor(R.color.Brow500)      // Specify the color of the title text
+                                        .textColor(R.color.Brow500)            // Specify a color for both the title and description text
+                                        .textTypeface(prueba)  // Specify a typeface for the text
+                                        .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
+                                        .drawShadow(true)                   // Whether to draw a drop shadow or not
+                                        .cancelable(true)                  // Whether tapping outside the outer circle dismisses the view
+                                        .tintTarget(true)                   // Whether to tint the target view's color
+                                        .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
+                                        .targetRadius(60),
+                                TapTarget.forView(view2, "ADEMÁS", "Puedes hacer clic aquí para ver que puedes hacer en la aplicación")
+                                        // All options below are optional
+                                        .outerCircleColor(R.color.Brow100)      // Specify a color for the outer circle
+                                        .outerCircleAlpha(0.96f)            // Specify the alpha amount for the outer circle
+                                        .targetCircleColor(R.color.Brow300)   // Specify a color for the target circle
+                                        .titleTextSize(30)                  // Specify the size (in sp) of the title text
+                                        .titleTextColor(R.color.Brow500)      // Specify the color of the title text
+                                        .textColor(R.color.Brow500)            // Specify a color for both the title and description text
+                                        .textTypeface(prueba)  // Specify a typeface for the text
+                                        .dimColor(R.color.black)            // If set, will dim behind the view with 30% opacity of the given color
+                                        .drawShadow(true)                   // Whether to draw a drop shadow or not
+                                        .cancelable(true)                  // Whether tapping outside the outer circle dismisses the view
+                                        .tintTarget(true)                   // Whether to tint the target view's color
+                                        .transparentTarget(false)           // Specify whether the target is transparent (displays the content underneath)
+                                        .targetRadius(60)
+                                        .icon(menu)
+                                )
+                        .listener(new TapTargetSequence.Listener() {
+                            // This listener will tell us when interesting(tm) events happen in regards
+                            // to the sequence
+                            @Override
+                            public void onSequenceFinish() {
+                                // Yay
+                            }
+
+                            @Override
+                            public void onSequenceStep(TapTarget lastTarget, boolean targetClicked) {
+                                // Perform action for the current target
+                            }
+
+                            @Override
+                            public void onSequenceCanceled(TapTarget lastTarget) {
+                                // Boo
+                            }
+                        }).start();
+            }
+        });
+
         return true;
     }
 

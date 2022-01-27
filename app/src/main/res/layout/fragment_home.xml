@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment"
-    android:background="@color/Brow50">
+    android:background="@drawable/gradient_background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,11 +23,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="32dp"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="@font/abel"
+                android:textStyle="bold"
                 android:gravity="center"
                 android:text="WARIVILLCA GO"
                 android:textColor="@color/darkColor"
-                android:textSize="35dp"
+                android:textSize="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"></TextView>
@@ -54,6 +55,7 @@
                 android:layout_marginBottom="24dp"
                 android:gravity="center"
                 android:text="@string/infoWari"
+                android:fontFamily="@font/quicksand"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 app:layout_constraintBottom_toTopOf="@+id/btn_home_acceso"
@@ -70,15 +72,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="108dp"
-                android:backgroundTint="@color/Brow200"
-                android:text="dale un vistazo"
-                android:textColor="@color/black"
-                app:cornerRadius="20dp"
+                android:backgroundTint="@color/Brow300"
+                android:text="¡dale un vistazo!"
+                app:cornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="20dp"
+                android:fontFamily="@font/quicksand"
+                android:textStyle="bold"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent">
-
             </Button>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

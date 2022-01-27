@@ -35,6 +35,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.UUID;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 public class DefensoresFragment extends Fragment implements View.OnClickListener {
 
     Button btnSolicitudDefensores;
@@ -79,14 +81,13 @@ public class DefensoresFragment extends Fragment implements View.OnClickListener
             case R.id.btnSoliDef:
 
                 if ("".equals(dtDni)) {
-                    Toast.makeText(getActivity(), "Ingrese un DNI", Toast.LENGTH_SHORT).show();
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE).setTitleText("ERROR").setContentText("Por favor ingrese su número de DNI").setConfirmText("OK").setConfirmButtonBackgroundColor(R.color.Brow300).show();
                 }else if("".equals(dtedad)){
-                    Toast.makeText(getActivity(), "Ingrese una EDAD", Toast.LENGTH_SHORT).show();
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE).setTitleText("ERROR").setContentText("Por favor ingrese su edad").setConfirmText("OK").setConfirmButtonBackgroundColor(R.color.Brow300).show();
                 }else if("".equals(dtUbi)){
-                    Toast.makeText(getActivity(), "Ingrese una UBICACIÓN", Toast.LENGTH_SHORT).show();
+                    new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE).setTitleText("ERROR").setContentText("Por favor ingrese su ubicación").setConfirmText("OK").setConfirmButtonBackgroundColor(R.color.Brow300).show();
                 }else{
                     EnviarDatos();
-                    LimpiarDatos();
                 }
                 break;
             default:
@@ -99,16 +100,25 @@ public class DefensoresFragment extends Fragment implements View.OnClickListener
         String playerName = MainActivity.Global.playerName;
         String playerEmail = MainActivity.Global.playerEmail;
 
-        Solicitud s = new Solicitud();
-        s.setsID(UUID.randomUUID().toString());
-        s.setDNI(dtDni);
-        s.setEdad(dtedad);
-        s.setNombre(playerName);
-        s.setEmail(playerEmail);
-        s.setUbicacion(dtUbi);
-        databaseReference.child("Solicitud").child(s.getsID()).setValue(s);
 
-        Toast.makeText(getActivity(), "¡Su solicitud se envió con éxito!", Toast.LENGTH_SHORT).show();
+        new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE).setTitleText("¿Estás seguro?").setContentText("Su solicitud se enviará en un momento.").setCancelText("NO").setCancelButtonBackgroundColor(R.color.Brow300).setConfirmText("SI").setConfirmButtonBackgroundColor(R.color.Brow300).showCancelButton(true).setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {@Override
+        public void onClick(SweetAlertDialog sDialog) {
+            // s.setsID(UUID.randomUUID().toString());
+            Solicitud s = new Solicitud();
+            String emailGuion= playerEmail.replace('.', '-');
+            String idSolicitud = emailGuion+dtDni;
+            s.setsID(idSolicitud);
+            s.setDNI(dtDni);
+            s.setEdad(dtedad);
+            s.setNombre(playerName);
+            s.setEmail(playerEmail);
+            s.setUbicacion(dtUbi);
+            databaseReference.child("Solicitud").child(s.getsID()).setValue(s);
+            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE).setTitleText("¡BUEN TRABAJO!").setContentText("Su solicitud se envió correctamente.").setConfirmText("OK").setConfirmButtonBackgroundColor(R.color.Brow300).show();
+            LimpiarDatos();
+            sDialog.cancel();
+        }
+        }).show();
     }
 
     private void LimpiarDatos() {

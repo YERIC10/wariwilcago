@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ui.defensores.DefensoresFragment"
-    android:background="@color/Brow100"
+    android:background="@drawable/gradient_background"
     android:padding="@dimen/activity_vertical_margin">
 
     <ScrollView
@@ -28,11 +28,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:layout_gravity="center"
                 android:gravity="center"
                 android:text="REGISTRO DE DEFENSORES"
+                android:fontFamily="@font/abel"
+                android:textStyle="bold"
                 android:textSize="35dp"
-                android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:textColor="@color/darkColor"></TextView>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:background="@drawable/separador"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -40,13 +48,17 @@
                 android:text="DNI"
                 android:textSize="20dp"
                 android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:fontFamily="@font/quicksand"
+                android:textStyle="bold"></TextView>
             <EditText
                 android:id="@+id/defDNI"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:textSize="20dp"
+                android:background="@drawable/border_txt"
+                android:padding="10dp"
                 android:inputType="number"
+                android:fontFamily="@font/quicksand"
                 android:digits="0123456789"
                 android:hint="Ingrese su DNI">
             </EditText>
@@ -57,12 +69,16 @@
                 android:text="EDAD"
                 android:textSize="20dp"
                 android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:fontFamily="@font/quicksand"
+                android:textStyle="bold"></TextView>
             <EditText
                 android:id="@+id/defEdad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:textSize="20dp"
+                android:background="@drawable/border_txt"
+                android:fontFamily="@font/quicksand"
+                android:padding="10dp"
                 android:inputType="number"
                 android:digits="0123456789"
                 android:hint="Ingrese su edad">
@@ -74,24 +90,30 @@
                 android:text="RESIDENCIA"
                 android:textSize="20dp"
                 android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:fontFamily="@font/quicksand"
+                android:textStyle="bold"></TextView>
             <EditText
                 android:id="@+id/defResidencia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="25dp"
+                android:background="@drawable/border_txt"
+                android:padding="10dp"
+                android:fontFamily="@font/quicksand"
+                android:textSize="20dp"
                 android:hint="Ingrese su lugar de residencia">
             </EditText>
             <Button
                 android:id="@+id/btnSoliDef"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/darkColor"
                 android:layout_marginTop="20dp"
+                android:backgroundTint="@color/Brow300"
                 android:text="Enviar Solicitud"
+                app:cornerRadius="10dp"
                 android:textSize="20dp"
-                ></Button>
+                android:fontFamily="@font/quicksand">
+            </Button>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

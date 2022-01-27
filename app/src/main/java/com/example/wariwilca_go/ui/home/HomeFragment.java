@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -97,8 +98,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Toast.makeText(getContext(), "ACCEDIENDO", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getActivity(), Recorrido_Fragment.class);
-                startActivity(intent);
+
+                View v = getActivity().getLayoutInflater().inflate(R.layout.fragment_recorrido_, null);
+                builder.setView(v);
             }
         })
         .setCancelable(false)

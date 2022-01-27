@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.visita.VisitaFragment"
-    android:background="@color/Brow100"
+    android:background="@drawable/gradient_background"
     android:padding="@dimen/activity_vertical_margin">
 
     <ScrollView
@@ -28,9 +29,15 @@
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
                 android:text="REGISTRO DE VISITA"
-                android:textSize="35dp"
-                android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:fontFamily="@font/abel"
+                android:textStyle="bold"
+                android:textSize="35dp"></TextView>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:background="@drawable/separador"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,19 +45,22 @@
                 android:text="FECHA"
                 android:textSize="20dp"
                 android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:fontFamily="@font/quicksand"
+                android:textStyle="bold"></TextView>
             <Button
                 android:id="@+id/btnFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Seleccionar Fecha">
+                android:text="Seleccionar Fecha"
+                android:fontFamily="@font/quicksand">
             </Button>
             <EditText
                 android:id="@+id/visitFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                android:visibility="invisible"
+                android:fontFamily="@font/quicksand"
+                android:visibility="gone"
                 android:clickable="false"
                 android:cursorVisible="false"
                 android:focusable="false"
@@ -63,19 +73,22 @@
                 android:text="HORA"
                 android:textSize="20dp"
                 android:textColor="@color/darkColor"
-                android:fontFamily="sans-serif-black"></TextView>
+                android:fontFamily="@font/quicksand"
+                android:textStyle="bold"></TextView>
             <Button
                 android:id="@+id/btnHora"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Seleccionar Hora">
+                android:text="Seleccionar Hora"
+                android:fontFamily="@font/quicksand">
             </Button>
             <EditText
                 android:id="@+id/visitHora"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="25dp"
-                android:visibility="invisible"
+                android:fontFamily="@font/quicksand"
+                android:visibility="gone"
                 android:clickable="false"
                 android:cursorVisible="false"
                 android:focusable="false"
@@ -92,26 +105,31 @@
                     android:text="CANTIDAD DE PERSONAS:"
                     android:textSize="20dp"
                     android:textColor="@color/darkColor"
-                    android:fontFamily="sans-serif-black"></TextView>
-
-                <ListView
-                    android:id="@+id/ctdPersonas"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"></ListView>
+                    android:fontFamily="@font/quicksand"
+                    android:textStyle="bold"></TextView>
+                <Spinner
+                    android:id="@+id/ctdPersonas2"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkColor"
+                    android:fontFamily="@font/quicksand">
+                </Spinner>
             </LinearLayout>
-
             <Button
                 android:id="@+id/btnSoliVisita"
+                android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/darkColor"
                 android:layout_marginTop="20dp"
+                android:backgroundTint="@color/Brow300"
                 android:text="Enviar Solicitud"
+                app:cornerRadius="10dp"
                 android:textSize="20dp"
-                ></Button>
+                android:fontFamily="@font/quicksand">
+            </Button>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

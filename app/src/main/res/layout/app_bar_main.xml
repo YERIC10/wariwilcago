@@ -6,19 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:padding="10px"
+        android:id="@+id/pruebaBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu_icon2">
+    </ImageView>
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.WARIWILCA_GO.AppBarOverlay">
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Brow200"
-            app:popupTheme="@style/Theme.WARIWILCA_GO.PopupOverlay" />
-
+            android:background="@color/Brow300"
+            app:popupTheme="@style/Theme.WARIWILCA_GO.PopupOverlay"
+            />
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main" />

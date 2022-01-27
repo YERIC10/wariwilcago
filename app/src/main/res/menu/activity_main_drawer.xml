@@ -2,26 +2,32 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_home"
-            android:title="@string/menu_home" />
-        <item
-            android:id="@+id/nav_recorrido"
-            android:icon="@drawable/ic_menu_recorrido"
-            android:title="@string/menu_recorrido" />
-       <item
-            android:id="@+id/busqueda_QR"
-            android:icon="@drawable/ic_search"
-            android:title="@string/busqueda_QR" />
-        <item
-            android:id="@+id/reg_defensores"
-            android:icon="@drawable/ic_defensores"
-            android:title="@string/reg_defensores" />
-        <item
-            android:id="@+id/res_visita"
-            android:icon="@drawable/ic_book"
-            android:title="@string/res_visita" />
-    </group>
+    <item android:title="Funcionales">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_menu_home"
+                android:title="@string/menu_home" />
+            <item
+                android:id="@+id/nav_recorrido"
+                android:icon="@drawable/ic_menu_recorrido"
+                android:title="@string/menu_recorrido" />
+            <item
+                android:id="@+id/busqueda_QR"
+                android:icon="@drawable/ic_search"
+                android:title="@string/busqueda_QR" />
+        </menu>
+    </item>
+    <item android:title="Solicitudes">
+        <menu>
+            <item
+                android:id="@+id/reg_defensores"
+                android:icon="@drawable/ic_defensores"
+                android:title="@string/reg_defensores" />
+            <item
+                android:id="@+id/res_visita"
+                android:icon="@drawable/ic_book"
+                android:title="@string/res_visita" />
+        </menu>
+    </item>
 </menu>
